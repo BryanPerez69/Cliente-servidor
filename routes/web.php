@@ -16,10 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::group(['prefix' => 'auth'], function () {
-  Route::get('/{provider}', 'Auth\LoginController@redirectToProvider');
-  Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-});
