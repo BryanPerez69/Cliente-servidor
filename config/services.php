@@ -41,4 +41,10 @@ return [
        'redirect' => env('GOOGLE_REDIRECT'),
    ],
 
+   'facebook' => [ //change it to any provider
+        'client_id' => '1798510880439179',
+        'client_secret' => '241b2c6130773c0b10a6d2a6aab63c5d',
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+    ],
+
 ];
