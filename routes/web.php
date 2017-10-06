@@ -23,3 +23,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/upload', 'StorageController@index')->name('upload');
 Route::post('storage/create', 'StorageController@save');
+
+Route::resource('cal', 'gCalendarController');
+Route::get('oauth', 'gCalendarController@oauth');
